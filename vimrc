@@ -46,7 +46,7 @@ set laststatus=2
 set statusline=%t\ %h%m%r%w\ [%{strlen(&ft)?&ft:'none'}\|%{&ff}\|%{strlen(&fenc)?&fenc:&enc}]%=[%l,%L,\ %c]
 
 " Default color scheme
-set guifont=Source\ Code\ Pro:h13
+set guifont=Inconsolata:h15
 set background=light
 let g:solarized_visibility='medium'
 let g:solarized_contrast='normal'
@@ -86,7 +86,7 @@ map <Leader><Space> :nohl<CR>
 " }}}
 
 " Spell checking. configure the language and turn off spell checking.
-set spell spelllang=en_ca
+set spell spelllang=en_us
 set nospell
 
 " Use the system clipboard
