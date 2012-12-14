@@ -46,11 +46,11 @@ set laststatus=2
 set statusline=%t\ %h%m%r%w\ [%{strlen(&ft)?&ft:'none'}\|%{&ff}\|%{strlen(&fenc)?&fenc:&enc}]%=[%l,%L,\ %c]
 
 " Default color scheme
-set guifont=Inconsolata:h15
-set background=light
-let g:solarized_visibility='medium'
-let g:solarized_contrast='normal'
-color solarized
+set guifont=Source\ Code\ Pro:h14
+" set background=light
+" let g:solarized_visibility='medium'
+" let g:solarized_contrast='normal'
+color vividchalk
 
 " Context-dependent cursor in the terminal
 let &t_SI = "\<Esc>]50;CursorShape=1\x7"
@@ -180,6 +180,9 @@ nmap <C-j> <C-W>j
 nmap <C-k> <C-W>k
 nmap <C-h> <C-W>h
 nmap <C-l> <C-W>l
+
+" TagBar
+nmap <F8> :TagbarToggle<CR>
 
 " Adjust viewports/splits to be the same size.
 map <Leader>= <C-w>=
