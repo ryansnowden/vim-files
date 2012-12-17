@@ -257,6 +257,9 @@ let g:syntastic_phpcs_disable=1
 " Ack plugin
 map <Leader>a :Ack<Space>
 
+" cakephp snippets
+:set ft=php.cakephp
+
 " }}}
 
 " MacVIM shift+arrow-keys behavior (required in .vimrc)
