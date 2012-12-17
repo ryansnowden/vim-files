@@ -7,6 +7,9 @@ set nocompatible
 call pathogen#infect()
 call pathogen#helptags()
 
+" PIV PHP Folding
+let g:DisableAutoPHPFolding = 1
+
 set number
 set ruler
 syntax on
