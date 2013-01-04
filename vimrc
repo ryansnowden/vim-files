@@ -49,11 +49,11 @@ set laststatus=2
 set statusline=%t\ %h%m%r%w\ [%{strlen(&ft)?&ft:'none'}\|%{&ff}\|%{strlen(&fenc)?&fenc:&enc}]%=[%l,%L,\ %c]
 
 " Default color scheme
-set guifont=Source\ Code\ Pro:h14
-" set background=light
-" let g:solarized_visibility='medium'
-" let g:solarized_contrast='normal'
-color vividchalk
+set guifont=Anonymous\ Pro:h15.5
+set background=dark
+let g:solarized_visibility='low'
+let g:solarized_contrast='high'
+color solarized
 
 " Context-dependent cursor in the terminal
 let &t_SI = "\<Esc>]50;CursorShape=1\x7"
@@ -103,6 +103,9 @@ set wildignore+=*.o,*.obj,.git,*.rbc,*.class,.svn,vendor/gems/*,*.pyc,node_modul
 if !has('gui_running')
 	let g:AutoClosePreservDotReg = 0
 endif
+
+" Split explorer nerdtree
+let NERDTreeHijackNetrw=1
 
 
 " Without setting this, ZoomWin restores windows in a way that causes
