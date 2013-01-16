@@ -27,6 +27,10 @@ set list listchars=tab:▸\ ,eol:¬,trail:·
 set noeol
 set autoindent
 
+"folding settings
+set foldnestmax=10
+set foldnestmax=1
+
 " Enable formatting of comments, and one letter words.
 " see :help fo-table
 set formatoptions=qrc1
@@ -49,7 +53,7 @@ set laststatus=2
 set statusline=%t\ %h%m%r%w\ [%{strlen(&ft)?&ft:'none'}\|%{&ff}\|%{strlen(&fenc)?&fenc:&enc}]%=[%l,%L,\ %c]
 
 " Default color scheme
-set guifont=Anonymous\ Pro:h15.5
+set guifont=Source\ Code\ Pro:h13
 set background=dark
 let g:solarized_visibility='low'
 let g:solarized_contrast='high'
