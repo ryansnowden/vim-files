@@ -108,6 +108,9 @@ if !has('gui_running')
 	let g:AutoClosePreservDotReg = 0
 endif
 
+set guioptions-=L
+set guioptions-=r
+
 " Split explorer nerdtree
 let NERDTreeHijackNetrw=1
 
