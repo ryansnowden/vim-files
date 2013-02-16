@@ -108,12 +108,12 @@ if !has('gui_running')
 	let g:AutoClosePreservDotReg = 0
 endif
 
+" Get rid of side scrollbars
 set guioptions-=L
 set guioptions-=r
 
 " Split explorer nerdtree
 let NERDTreeHijackNetrw=1
-
 
 " Without setting this, ZoomWin restores windows in a way that causes
 " equalalways behavior to be triggered the next time CommandT is used.
@@ -255,6 +255,13 @@ let g:ctrlp_extensions = ['tag']
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
 let g:ctrlp_working_path_mode = 'a'
+
+" SaveSession 
+let g:session_autosave = 'yes'
+
+" Restore Windows & Folds
+au BufWinLeave * silent! mkview
+au BufWinEnter * silent! loadview
 
 " NERDTree configuration
 let NERDTreeIgnore=['\.rbc$', '\~$', '\.pyc$']
