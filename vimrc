@@ -28,8 +28,8 @@ set noeol
 set autoindent
 
 "folding settings
-set foldnestmax=10
 set foldnestmax=1
+set foldnestmax=5
 
 " Enable formatting of comments, and one letter words.
 " see :help fo-table
@@ -54,7 +54,7 @@ set statusline=%t\ %h%m%r%w\ [%{strlen(&ft)?&ft:'none'}\|%{&ff}\|%{strlen(&fenc)
 
 " Default color scheme
 set guifont=Source\ Code\ Pro:h13
-set background=dark
+set background=light
 let g:solarized_visibility='low'
 let g:solarized_contrast='high'
 color solarized
@@ -237,6 +237,9 @@ map <Leader>rt :!ctags --extra=+f -R *<CR><CR>
 " Go to the next tag.
 map <C-\> :tnext<CR>
 
+" CtrlP Ctags
+nnoremap <Leader>. :CtrlPTag<CR>
+
 " }}}
 
 " {{{ Plugin config
@@ -247,6 +250,12 @@ map <Leader><Leader> :ZoomWin<CR>
 " CTags
 let tlist_php_settings = 'php;c:class;d:constant;f:function'
 
+" CtrlP
+let g:ctrlp_extensions = ['tag']
+let g:ctrlp_map = '<c-p>'
+let g:ctrlp_cmd = 'CtrlP'
+let g:ctrlp_working_path_mode = 'a'
+
 " NERDTree configuration
 let NERDTreeIgnore=['\.rbc$', '\~$', '\.pyc$']
 map <Leader>n :NERDTreeToggle<CR>
@@ -254,9 +263,6 @@ map <Leader>n :NERDTreeToggle<CR>
 " Leader-/ to toggle comments
 map <Leader>/ <plug>NERDCommenterToggle<CR>
 imap <Leader>/ <Esc><plug>NERDCommenterToggle<CR>i
-
-" Command-T configuration
-let g:CommandTMaxHeight=20
 
 " RagTag
 let g:ragtag_global_maps = 1
@@ -269,6 +275,9 @@ let g:syntastic_phpcs_disable=1
 
 " Ack plugin
 map <Leader>a :Ack<Space>
+
+" Non Obtrusive JSHint
+map <leader>jh :JSHintToggle<CR>
 
 " cakephp snippets
 :set ft=php.cakephp
