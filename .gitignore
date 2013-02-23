@@ -1,3 +1,6 @@
 backup/
 
 /.netrwhist
+/sessions/default.vim
+/sessions/default.vim.lock
+/view/
